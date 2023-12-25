@@ -129,7 +129,7 @@ class Products(models.Model):
     unitsinstock = models.SmallIntegerField(db_column='UnitsInStock', blank=True, null=True)  # Field name made lowercase.
     unitsonorder = models.SmallIntegerField(db_column='UnitsOnOrder', blank=True, null=True)  # Field name made lowercase.
     reorderlevel = models.SmallIntegerField(db_column='ReorderLevel', blank=True, null=True)  # Field name made lowercase.
-    discontinued = models.TextField(db_column='Discontinued')  # Field name made lowercase. This field type is a guess.
+    discontinued = models.CharField(db_column='Discontinued',max_length=1)  # Field name made lowercase. This field type is a guess.
 
     class Meta:
         managed = False
